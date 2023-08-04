@@ -1,0 +1,6 @@
+install dependancy folder using npm i
+run the code npm start
+
+request ->
+http://localhost:8035/service/importData
+send form data with post request key name -> file
