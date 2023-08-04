@@ -1,0 +1,305 @@
+{
+	"info": {
+		"_postman_id": "69402812-98c5-4290-8736-0274d705efc5",
+		"name": "test",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "10326422",
+		"_collection_link": "https://martian-flare-167070.postman.co/workspace/My-Workspace~0ba60982-906a-4e1e-88bf-72466d9fd69d/collection/10326422-69402812-98c5-4290-8736-0274d705efc5?action=share&creator=10326422&source=collection_link"
+	},
+	"item": [
+		{
+			"name": "import data Copy",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "{{localToken}}",
+						"type": "text"
+					},
+					{
+						"key": "companyID",
+						"value": "DSC101",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "file",
+							"type": "file",
+							"src": "/C:/Users/admin/Downloads/data-sheet.csv"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8035/service/importData",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8035",
+					"path": [
+						"service",
+						"importData"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "update user data Copy",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "{{localToken}}",
+						"type": "text"
+					},
+					{
+						"key": "companyID",
+						"value": "DSC101",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"firstName\": \"suhas\",\r\n    \"companyName\": \"test\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8035/service/updateUserData/64ccb966de0f1d9fe22f49d0",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8035",
+					"path": [
+						"service",
+						"updateUserData",
+						"64ccb966de0f1d9fe22f49d0"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "update policy Data Copy",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "{{localToken}}",
+						"type": "text"
+					},
+					{
+						"key": "companyID",
+						"value": "DSC101",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"policyMode\": \"10\",\r\n    \"policyType\": \"Double\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8035/service/updatePolicyData/64ccb967de0f1d9fe22f51a0",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8035",
+					"path": [
+						"service",
+						"updatePolicyData",
+						"64ccb967de0f1d9fe22f51a0"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "update agent data Copy",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "{{localToken}}",
+						"type": "text"
+					},
+					{
+						"key": "companyID",
+						"value": "DSC101",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"t@gmail.conm\",\r\n    \"accountName\": \"test\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8035/service/updateAgentData/64ccb966de0f1d9fe22f4db8",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8035",
+					"path": [
+						"service",
+						"updateAgentData",
+						"64ccb966de0f1d9fe22f4db8"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete user Copy",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "{{localToken}}",
+						"type": "text"
+					},
+					{
+						"key": "companyID",
+						"value": "DSC101",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"t@gmail.conm\",\r\n    \"accountName\": \"test\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8035/service/deleteUser/64ccb966de0f1d9fe22f49d1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8035",
+					"path": [
+						"service",
+						"deleteUser",
+						"64ccb966de0f1d9fe22f49d1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete policy Copy",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "{{localToken}}",
+						"type": "text"
+					},
+					{
+						"key": "companyID",
+						"value": "DSC101",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"t@gmail.conm\",\r\n    \"accountName\": \"test\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8035/service/deletePolicy/64ccb967de0f1d9fe22f51a0",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8035",
+					"path": [
+						"service",
+						"deletePolicy",
+						"64ccb967de0f1d9fe22f51a0"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete agent Copy",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "{{localToken}}",
+						"type": "text"
+					},
+					{
+						"key": "companyID",
+						"value": "DSC101",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"t@gmail.conm\",\r\n    \"accountName\": \"test\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8035/service/deleteAgent/64ccb966de0f1d9fe22f4db8",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8035",
+					"path": [
+						"service",
+						"deleteAgent",
+						"64ccb966de0f1d9fe22f4db8"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
