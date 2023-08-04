@@ -19,9 +19,51 @@ const upload = multer({
 }).single("file");
 
 router.post("/importData", upload, importData);
+router.post("/updateUserData/:id", updateUserData);
+router.post("/updatePolicyData/:id", updatePolicyData);
+router.post("/updateAgentData/:id", updateAgentData);
+router.post("/deleteUser/:id", deleteUser);
+router.post("/deletePolicy/:id", deletePolicy);
+router.post("/deleteAgent/:id", deleteAgent);
 
 function importData(req, res, next) {
   service.importData(req, (error, result) => {
+    return error ? res.send(error) : res.send(result);
+  });
+}
+
+function updateUserData(req, res, next) {
+  service.updateUserData(req, (error, result) => {
+    return error ? res.send(error) : res.send(result);
+  });
+}
+
+function updatePolicyData(req, res, next) {
+  service.updatePolicyData(req, (error, result) => {
+    return error ? res.send(error) : res.send(result);
+  });
+}
+
+function updateAgentData(req, res, next) {
+  service.updateAgentData(req, (error, result) => {
+    return error ? res.send(error) : res.send(result);
+  });
+}
+
+function deleteUser(req, res, next) {
+  service.deleteUser(req, (error, result) => {
+    return error ? res.send(error) : res.send(result);
+  });
+}
+
+function deletePolicy(req, res, next) {
+  service.deletePolicy(req, (error, result) => {
+    return error ? res.send(error) : res.send(result);
+  });
+}
+
+function deleteAgent(req, res, next) {
+  service.deleteAgent(req, (error, result) => {
     return error ? res.send(error) : res.send(result);
   });
 }
